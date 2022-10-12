@@ -16,6 +16,7 @@ const GOOGLE_CLIENT_SECRET = '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';
 //const GOOGLE_CLIENT_ID = "825786877679-ue1auo16l6hlu9bh92isbl9g5faol1rg.apps.googleusercontent.com";
 //const GOOGLE_CLIENT_SECRET = "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";
 
+
 module.exports = {
   BACK_URL,
   FRONT_URL,
