@@ -26,7 +26,7 @@ server.use(morgan("dev"));
 //////////PASSPORT ojo que hay un import de cors mas arriba
 
 
-server.use(session({secret: 'estoesunsecreto', resave:true,saveUninitialized:true, cookie : {sameSite: "none", secure:true, maxAge:(1 * 60 * 60 * 1000)}}))
+server.use(session({secret: 'estoesunsecreto', resave:false,saveUninitialized:false, cookie : {sameSite: "none", secure:true, maxAge:(1 * 60 * 60 * 1000)}}))
 server.use(passport.initialize());
 server.use(passport.session());
 server.use(
@@ -38,7 +38,7 @@ server.use(
       "X-Requested-With, x-auth-token, X-HTTP-Method-Override, Content-Type, Accept, access-control-allow-credentials", */
   })
 );
-//server.set("trust proxy", 1);
+server.set("trust proxy", 1);
 //////////PASSPORT
 
 server.use((req, res, next) => {
