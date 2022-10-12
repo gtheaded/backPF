@@ -26,7 +26,8 @@ server.use(morgan("dev"));
 //////////PASSPORT ojo que hay un import de cors mas arriba
 
 
-server.use(session({secret: 'estoesunsecreto', resave:false,saveUninitialized:false, cookie : {httpOnly:true, maxAge:(1 * 60 * 60 * 1000)}}))
+//server.use(session({secret: 'estoesunsecreto', resave:false,saveUninitialized:false, cookie : {httpOnly:true, maxAge:(1 * 60 * 60 * 1000)}}))
+server.use(session({secret: 'estoesunsecreto', resave:true,saveUninitialized:true, cookie : {sameSite: "none", secure: true, maxAge: 1000*60*60*24 }}))
 server.use(passport.initialize());
 server.use(passport.session());
 server.use(
