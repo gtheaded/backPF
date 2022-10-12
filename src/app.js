@@ -32,12 +32,13 @@ server.use(passport.session());
 server.use(
   cors({
     origin: CORS_URL, //react
-    methods: "GET,POST,PUT,DELETE",
+  /*   methods: "GET,POST,PUT,DELETE", */
     credentials: true,
-    allowedHeaders:
-      "X-Requested-With, x-auth-token, X-HTTP-Method-Override, Content-Type, Accept, access-control-allow-credentials",
+    /* allowedHeaders:
+      "X-Requested-With, x-auth-token, X-HTTP-Method-Override, Content-Type, Accept, access-control-allow-credentials", */
   })
 );
+server.set("trust proxy", 1);
 //////////PASSPORT
 
 server.use((req, res, next) => {
