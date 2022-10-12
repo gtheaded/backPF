@@ -38,7 +38,7 @@ server.use(
       "X-Requested-With, x-auth-token, X-HTTP-Method-Override, Content-Type, Accept, access-control-allow-credentials", */
   })
 );
-server.set("trust proxy", 1);
+//server.set("trust proxy", 1);
 //////////PASSPORT
 
 server.use((req, res, next) => {
