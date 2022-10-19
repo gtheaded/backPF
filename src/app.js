@@ -20,7 +20,7 @@ server.name = "API";
 
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
-server.use(cookieParser('estoesunsecreto'));
+server.use(cookieParser());
 server.use(morgan("dev"));
 
 //////////PASSPORT ojo que hay un import de cors mas arriba
@@ -32,11 +32,8 @@ server.use(passport.session());
 server.use(express.json());
 server.use(
   cors({
-    origin: CORS_URL, //react
-    methods: "GET,POST,PUT,DELETE", 
+    origin: CORS_URL, //react 
     credentials: true,
-     allowedHeaders:
-      "X-Requested-With, x-auth-token, X-HTTP-Method-Override, Content-Type, Accept, access-control-allow-credentials", 
   })
 );
 server.set("trust proxy", 1);
