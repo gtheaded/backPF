@@ -20,12 +20,12 @@ server.name = "API";
 
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
-server.use(cookieParser('estoesunsecreto'));
+//server.use(cookieParser('estoesunsecreto'));
 server.use(morgan("dev"));
 
 //////////PASSPORT ojo que hay un import de cors mas arriba
-
-server.use(session({secret: 'estoesunsecreto', resave:false,saveUninitialized:false, cookie : {sameSite: "none", secure:true, maxAge:(1 * 60 * 60 * 1000)}}))//deploy
+server.set("trust proxy", 1);
+server.use(session({secret: 'estoesunsecreto', resave:true,saveUninitialized:true, cookie : {sameSite: "none", secure:true, maxAge:(1000 * 60 * 60 * 24 * 7)}}))//deploy
 //server.use(session({secret: 'estoesunsecreto', resave:false,saveUninitialized:false, cookie : {maxAge:(1 * 60 * 60 * 1000)}}))//local
 server.use(passport.initialize());
 server.use(passport.session());
@@ -38,7 +38,7 @@ server.use(
       "X-Requested-With, x-auth-token, X-HTTP-Method-Override, Content-Type, Accept, access-control-allow-credentials", 
   })
 );
-server.set("trust proxy", 1);
+
 //////////PASSPORT
 
 server.use((req, res, next) => {
