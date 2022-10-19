@@ -29,6 +29,7 @@ server.use(session({secret: 'estoesunsecreto', resave:true,saveUninitialized:tru
 //server.use(session({secret: 'estoesunsecreto', resave:false,saveUninitialized:false, cookie : {maxAge:(1 * 60 * 60 * 1000)}}))//local
 server.use(passport.initialize());
 server.use(passport.session());
+server.use(express.json());
 server.use(
   cors({
     origin: CORS_URL, //react
