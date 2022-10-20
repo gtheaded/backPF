@@ -41,7 +41,7 @@ server.use(morgan("dev"));
     secret: "estoesunsecreto",
     resave: false,
     saveUninitialized: false,
-    cookie: { sameSite: "none", secure: true, maxAge: 1 * 60 * 60 * 1000 },
+    cookie: { sameSite: "none", secure: true, maxAge: 24 * 60 * 60 * 1000 },
   })
 );  //deploy
 //server.use(session({secret: 'estoesunsecreto', resave:false,saveUninitialized:false, cookie : {maxAge:(1 * 60 * 60 * 1000)}}))//local
