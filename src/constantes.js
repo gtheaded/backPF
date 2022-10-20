@@ -16,7 +16,7 @@ const FRONT_URL = "https://frontpf-swart.vercel.app";
 //PF Mio
 const GOOGLE_CLIENT_ID = '222245387934-d4rnduqia7e5hubjf17cbj8aua1n6qk6.apps.googleusercontent.com';
 const GOOGLE_CLIENT_SECRET = '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';
-
+//
 //PF Henry
 //const GOOGLE_CLIENT_ID = "825786877679-ue1auo16l6hlu9bh92isbl9g5faol1rg.apps.googleusercontent.com";
 //const GOOGLE_CLIENT_SECRET = "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";
