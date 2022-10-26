@@ -9,7 +9,7 @@
 
 
 //MIO
-const BACK_URL = "https://backpf-production-c63d.up.railway.app";
+const BACK_URL = "backpf-production-efea.up.railway.app";
 const CORS_URL = "https://frontpf-swart.vercel.app";
 const FRONT_URL = "https://frontpf-swart.vercel.app";
 
